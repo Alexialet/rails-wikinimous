@@ -1,0 +1,20 @@
+<div class="navbar-wikinimous">
+
+  <a href="/" class="navbar-wagon-brand">Articles - Wikinimous
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wikinimous-right hidden-xs hidden-sm">
+
+    <a href="new_article_path" class="navbar-wikinimous-item navbar-wikinimous-link">New article</a>
+  </div>
+</div>
+
+<div class="container">
+<ul> <% @articles.each do |article| %>
+<ol> <h2> <%= link_to article.title, article_path(article) %> </h2>
+  <p> <%= article.content %></p> </ol>
+<% end %>
+</ul>
+
+</div>
